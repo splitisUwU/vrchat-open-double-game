@@ -1,0 +1,16 @@
+import subprocess
+import os
+
+# Remplace ce chemin par celui de ton jeu
+chemin_jeu = r"C:\Program Files (x86)\Steam\steamapps\common\VRChat/start_protected_game.exe"
+
+# Vérifie que le fichier existe
+if os.path.exists(chemin_jeu):
+    try:
+        subprocess.run(chemin_jeu)
+        print("Jeu lancé avec succès !")
+    except Exception as e:
+        print("Erreur lors du lancement :", e)
+else:
+    print("Fichier .exe introuvable :", chemin_jeu)
+
